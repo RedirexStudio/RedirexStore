@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController; // PagesController
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/darkside', function () {
+    return view('admin/index');
+})->name('darkside');
+
+Route::get('/darkside/pages', function () {
+    return view('admin/pages/pages');
+})->name('darkside-pages');
+
+Route::get('/darkside/pages/add', function () {
+    return view('admin/pages/add');
+})->name('add-page');
+
+Route::post('/darkside/pages/add/new', [PagesController::class, 'add_page'])->name('add-page-request');
