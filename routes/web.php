@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/darkside', function () {
-    return view('admin/index');
+    return view('admin/home');
 })->name('darkside');
 
 Route::get('/darkside/pages', function () {
