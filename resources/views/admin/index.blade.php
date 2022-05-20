@@ -21,6 +21,12 @@
         <!-- Content -->
         <div class="content_wrap">
             <div class="header">
+                <!--
+                * Uncomment code with "@" if you need dependecy of page url *
+                    if( Request::is('/'))
+                        Содержимое зависимое от url
+                    endif
+                -->
                 <h1>@yield('darkside-page-title')</h1>
             </div>
             <div class="content">
