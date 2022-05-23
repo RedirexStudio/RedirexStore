@@ -22,9 +22,11 @@ Route::get('/darkside', function () {
     return view('admin/home');
 })->name('darkside');
 
-Route::get('/darkside/pages', function () {
-    return view('admin/pages/pages');
-})->name('darkside-pages');
+Route::get('/darkside/login', function () {
+    return view('admin/pages/login');
+})->name('darkside-login');
+
+Route::get('/darkside/pages', [PagesController::class, 'output_pages'])->name('darkside-pages');
 
 Route::get('/darkside/pages/add', function () {
     return view('admin/pages/add');

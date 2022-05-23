@@ -29,17 +29,12 @@ endsection
                 <input type="text" id="title" name="page_title" class="form-control" placeholder="Введите название страницы" />
             </div>
             <div class="mb-3">
+                <label for="page_content" class="form-label">Содержимое страницы</label>
+                <textarea name="page_content" id="page_content" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
                 <input type="submit" class="form-control" value="Опубликовать" />
             </div>
         </form>
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
     </div>
 @endsection
