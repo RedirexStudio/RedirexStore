@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DarksideController; // DarksideController
+use App\Http\Controllers\DarksideLogin; // DarksideLogin
 use App\Http\Controllers\PagesController; // PagesController
 
 /*
@@ -14,22 +16,17 @@ use App\Http\Controllers\PagesController; // PagesController
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth', 'isadmin']], function(){
+    Route::get('/darkside', [DarksideController::class, 'darkside'])->name('darkside');
+    Route::get('/darkside/pages', [PagesController::class, 'output_pages'])->name('darkside-pages');
+    Route::post('/darkside/pages/add/new', [PagesController::class, 'add_page'])->name('add-page-request');
+    Route::get('/darkside/pages/add', function () {
+        return view('admin/pages/add');
+    })->name('add-page');
 });
 
-Route::get('/darkside', function () {
-    return view('admin/home');
-})->name('darkside');
+Route::get('/darkside/login', [DarksideLogin::class, 'darkside_login'])->name('darkside-login');
 
-Route::get('/darkside/login', function () {
-    return view('admin/pages/login');
-})->name('darkside-login');
+Auth::routes();
 
-Route::get('/darkside/pages', [PagesController::class, 'output_pages'])->name('darkside-pages');
-
-Route::get('/darkside/pages/add', function () {
-    return view('admin/pages/add');
-})->name('add-page');
-
-Route::post('/darkside/pages/add/new', [PagesController::class, 'add_page'])->name('add-page-request');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

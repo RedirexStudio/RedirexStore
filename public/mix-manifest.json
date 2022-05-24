@@ -1,6 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/admin/js/darkside.js": "/admin/js/darkside.js",
-    "/admin/css/darkside.css": "/admin/css/darkside.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/admin/css/darkside.css": "/admin/css/darkside.css"
 }

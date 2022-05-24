@@ -1,8 +1,8 @@
 @extends('admin.index')
 
-@section('darkside-title')DarkSide - Добавление страницы@endsection
+@section('darkside-title', 'DarkSide - Добавление страницы')
 
-@section('darkside-page-title')Добавление страницы@endsection
+@section('darkside-page-title', 'Добавление страницы')
 
 <!--
 * Uncomment this if you want to append aside list *

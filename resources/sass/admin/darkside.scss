@@ -71,6 +71,21 @@
     padding: 20px 0;
     background-color: #0c0c0c;
     border-right: 1px solid #151515;
+
+    .login_cart{
+        background-color: #1a1a1a;
+        margin: 10px;
+        padding: 10px;
+        color: #fff;
+        font-size: 12px
+    }
+    .login_cart span:first-child{
+        font-weight: 600;
+    }
+    .login_cart a{
+        color: #fff;
+    }
+
     ul{
         padding: 0;
         list-style: none;
@@ -127,7 +142,16 @@
     }
 }
 .login_wrap{
-    flex: 0 1 100%
+    flex: 0 1 100%;
+
+    .content{
+        .inner{
+            min-height: unset
+        }
+    }
+    .system-messages{
+        margin-top: 30px;
+    }
 }
 
  
@@ -151,4 +175,11 @@
         line-height: 1;
         padding: 6px;
     }
+}
+
+/* DarkSide -> Login Page */
+.auth_form{
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto
 }

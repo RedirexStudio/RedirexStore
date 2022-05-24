@@ -76,6 +76,19 @@
   background-color: #0c0c0c;
   border-right: 1px solid #151515;
 }
+.sidebar .login_cart {
+  background-color: #1a1a1a;
+  margin: 10px;
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+}
+.sidebar .login_cart span:first-child {
+  font-weight: 600;
+}
+.sidebar .login_cart a {
+  color: #fff;
+}
 .sidebar ul {
   padding: 0;
   list-style: none;
@@ -124,6 +137,12 @@
 .login_wrap {
   flex: 0 1 100%;
 }
+.login_wrap .content .inner {
+  min-height: unset;
+}
+.login_wrap .system-messages {
+  margin-top: 30px;
+}
 
 /* Action bar styles */
 .action_bar {
@@ -143,4 +162,11 @@
 .action_bar .buttons .add_page {
   line-height: 1;
   padding: 6px;
+}
+
+/* DarkSide -> Login Page */
+.auth_form {
+  max-width: 410px;
+  width: 100%;
+  margin: 0 auto;
 }

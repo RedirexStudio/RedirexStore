@@ -1,32 +1,32 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./resources/js/admin/darkside.js":
 /*!****************************************!*\
   !*** ./resources/js/admin/darkside.js ***!
   \****************************************/
-$(document).ready(function () {
-  /* DarkSide -> add page -> Initialiete tinymce for content textarea */
-  tinymce.init({
-    selector: 'textarea',
-    plugins: ['advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'help', 'wordcount'],
-    toolbar: 'undo redo | blocks | ' + 'bold italic strikethrough forecolor backcolor | alignleft aligncenter ' + 'alignright alignjustify | bullist numlist outdent indent | ' + 'removeformat blockquote | image media | help',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
-  });
-  /* DarkSide -> archive pages -> context menu */
+/***/ (() => {
 
-  $('.pages_archive table tbody tr').on('contextmenu', function (e) {
-    var top = e.pageY - 10;
-    var left = e.pageX - 90;
-    $("#page_edit-context").css({
-      display: "block",
-      top: top,
-      left: left
-    }).addClass("show");
-    return false; //blocks default Webbrowser right click menu
-  });
-  $('.general_container').click(function () {
-    // if( !$(this).closest('.pages_archive').length > 0 ) $("#page_edit-context").removeClass("show").hide();
-    $("#page_edit-context").removeClass("show").hide();
-  });
-});
+eval("$(document).ready(function () {\n  /* DarkSide -> add page -> Initialiete tinymce for content textarea */\n  tinymce.init({\n    selector: 'textarea',\n    plugins: ['advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'help', 'wordcount'],\n    toolbar: 'undo redo | blocks | ' + 'bold italic strikethrough forecolor backcolor | alignleft aligncenter ' + 'alignright alignjustify | bullist numlist outdent indent | ' + 'removeformat blockquote | image media | help',\n    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'\n  });\n  /* DarkSide -> archive pages -> context menu */\n\n  $('.pages_archive table tbody tr').on('contextmenu', function (e) {\n    var top = e.pageY - 10;\n    var left = e.pageX - 90;\n    $(\"#page_edit-context\").css({\n      display: \"block\",\n      top: top,\n      left: left\n    }).addClass(\"show\");\n    return false; //blocks default Webbrowser right click menu\n  });\n  $('.general_container').click(function () {\n    // if( !$(this).closest('.pages_archive').length > 0 ) $(\"#page_edit-context\").removeClass(\"show\").hide();\n    $(\"#page_edit-context\").removeClass(\"show\").hide();\n  });\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyIkIiwiZG9jdW1lbnQiLCJyZWFkeSIsInRpbnltY2UiLCJpbml0Iiwic2VsZWN0b3IiLCJwbHVnaW5zIiwidG9vbGJhciIsImNvbnRlbnRfc3R5bGUiLCJvbiIsImUiLCJ0b3AiLCJwYWdlWSIsImxlZnQiLCJwYWdlWCIsImNzcyIsImRpc3BsYXkiLCJhZGRDbGFzcyIsImNsaWNrIiwicmVtb3ZlQ2xhc3MiLCJoaWRlIl0sInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy9hZG1pbi9kYXJrc2lkZS5qcz80ZDFiIl0sInNvdXJjZXNDb250ZW50IjpbIiQoZG9jdW1lbnQpLnJlYWR5KCgpPT57XHJcbiAgICAvKiBEYXJrU2lkZSAtPiBhZGQgcGFnZSAtPiBJbml0aWFsaWV0ZSB0aW55bWNlIGZvciBjb250ZW50IHRleHRhcmVhICovXHJcbiAgICB0aW55bWNlLmluaXQoe1xyXG4gICAgICBzZWxlY3RvcjogJ3RleHRhcmVhJyxcclxuICAgICAgcGx1Z2luczogW1xyXG4gICAgICAgICdhZHZsaXN0JywgJ2F1dG9saW5rJywgJ2xpc3RzJywgJ2xpbmsnLCAnaW1hZ2UnLCAnY2hhcm1hcCcsICdwcmV2aWV3JyxcclxuICAgICAgICAnYW5jaG9yJywgJ3NlYXJjaHJlcGxhY2UnLCAndmlzdWFsYmxvY2tzJywgJ2NvZGUnLCAnZnVsbHNjcmVlbicsXHJcbiAgICAgICAgJ2luc2VydGRhdGV0aW1lJywgJ21lZGlhJywgJ3RhYmxlJywgJ2hlbHAnLCAnd29yZGNvdW50J1xyXG4gICAgICBdLFxyXG4gICAgICB0b29sYmFyOiAndW5kbyByZWRvIHwgYmxvY2tzIHwgJyArXHJcbiAgICAgICdib2xkIGl0YWxpYyBzdHJpa2V0aHJvdWdoIGZvcmVjb2xvciBiYWNrY29sb3IgfCBhbGlnbmxlZnQgYWxpZ25jZW50ZXIgJyArXHJcbiAgICAgICdhbGlnbnJpZ2h0IGFsaWduanVzdGlmeSB8IGJ1bGxpc3QgbnVtbGlzdCBvdXRkZW50IGluZGVudCB8ICcgK1xyXG4gICAgICAncmVtb3ZlZm9ybWF0IGJsb2NrcXVvdGUgfCBpbWFnZSBtZWRpYSB8IGhlbHAnLFxyXG4gICAgICBjb250ZW50X3N0eWxlOiAnYm9keSB7IGZvbnQtZmFtaWx5OkhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmOyBmb250LXNpemU6MTZweCB9J1xyXG4gICAgfSk7XHJcblxyXG4gICAgLyogRGFya1NpZGUgLT4gYXJjaGl2ZSBwYWdlcyAtPiBjb250ZXh0IG1lbnUgKi9cclxuICAgICQoJy5wYWdlc19hcmNoaXZlIHRhYmxlIHRib2R5IHRyJykub24oJ2NvbnRleHRtZW51JywgKGUpPT57XHJcbiAgICAgIHZhciB0b3AgPSBlLnBhZ2VZIC0gMTA7XHJcbiAgICAgIHZhciBsZWZ0ID0gZS5wYWdlWCAtIDkwO1xyXG4gICAgICAkKFwiI3BhZ2VfZWRpdC1jb250ZXh0XCIpLmNzcyh7XHJcbiAgICAgICAgZGlzcGxheTogXCJibG9ja1wiLFxyXG4gICAgICAgIHRvcDogdG9wLFxyXG4gICAgICAgIGxlZnQ6IGxlZnRcclxuICAgICAgfSkuYWRkQ2xhc3MoXCJzaG93XCIpO1xyXG4gICAgICByZXR1cm4gZmFsc2U7IC8vYmxvY2tzIGRlZmF1bHQgV2ViYnJvd3NlciByaWdodCBjbGljayBtZW51XHJcbiAgICB9KTtcclxuICAgICQoJy5nZW5lcmFsX2NvbnRhaW5lcicpLmNsaWNrKGZ1bmN0aW9uKCl7XHJcbiAgICAgIC8vIGlmKCAhJCh0aGlzKS5jbG9zZXN0KCcucGFnZXNfYXJjaGl2ZScpLmxlbmd0aCA+IDAgKSAkKFwiI3BhZ2VfZWRpdC1jb250ZXh0XCIpLnJlbW92ZUNsYXNzKFwic2hvd1wiKS5oaWRlKCk7XHJcbiAgICAgICQoXCIjcGFnZV9lZGl0LWNvbnRleHRcIikucmVtb3ZlQ2xhc3MoXCJzaG93XCIpLmhpZGUoKTtcclxuICAgIH0pXHJcbn0pIl0sIm1hcHBpbmdzIjoiQUFBQUEsQ0FBQyxDQUFDQyxRQUFELENBQUQsQ0FBWUMsS0FBWixDQUFrQixZQUFJO0VBQ2xCO0VBQ0FDLE9BQU8sQ0FBQ0MsSUFBUixDQUFhO0lBQ1hDLFFBQVEsRUFBRSxVQURDO0lBRVhDLE9BQU8sRUFBRSxDQUNQLFNBRE8sRUFDSSxVQURKLEVBQ2dCLE9BRGhCLEVBQ3lCLE1BRHpCLEVBQ2lDLE9BRGpDLEVBQzBDLFNBRDFDLEVBQ3FELFNBRHJELEVBRVAsUUFGTyxFQUVHLGVBRkgsRUFFb0IsY0FGcEIsRUFFb0MsTUFGcEMsRUFFNEMsWUFGNUMsRUFHUCxnQkFITyxFQUdXLE9BSFgsRUFHb0IsT0FIcEIsRUFHNkIsTUFIN0IsRUFHcUMsV0FIckMsQ0FGRTtJQU9YQyxPQUFPLEVBQUUsMEJBQ1Qsd0VBRFMsR0FFVCw2REFGUyxHQUdULDhDQVZXO0lBV1hDLGFBQWEsRUFBRTtFQVhKLENBQWI7RUFjQTs7RUFDQVIsQ0FBQyxDQUFDLCtCQUFELENBQUQsQ0FBbUNTLEVBQW5DLENBQXNDLGFBQXRDLEVBQXFELFVBQUNDLENBQUQsRUFBSztJQUN4RCxJQUFJQyxHQUFHLEdBQUdELENBQUMsQ0FBQ0UsS0FBRixHQUFVLEVBQXBCO0lBQ0EsSUFBSUMsSUFBSSxHQUFHSCxDQUFDLENBQUNJLEtBQUYsR0FBVSxFQUFyQjtJQUNBZCxDQUFDLENBQUMsb0JBQUQsQ0FBRCxDQUF3QmUsR0FBeEIsQ0FBNEI7TUFDMUJDLE9BQU8sRUFBRSxPQURpQjtNQUUxQkwsR0FBRyxFQUFFQSxHQUZxQjtNQUcxQkUsSUFBSSxFQUFFQTtJQUhvQixDQUE1QixFQUlHSSxRQUpILENBSVksTUFKWjtJQUtBLE9BQU8sS0FBUCxDQVJ3RCxDQVExQztFQUNmLENBVEQ7RUFVQWpCLENBQUMsQ0FBQyxvQkFBRCxDQUFELENBQXdCa0IsS0FBeEIsQ0FBOEIsWUFBVTtJQUN0QztJQUNBbEIsQ0FBQyxDQUFDLG9CQUFELENBQUQsQ0FBd0JtQixXQUF4QixDQUFvQyxNQUFwQyxFQUE0Q0MsSUFBNUM7RUFDRCxDQUhEO0FBSUgsQ0EvQkQiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYWRtaW4vZGFya3NpZGUuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/admin/darkside.js\n");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./resources/js/admin/darkside.js"]();
+/******/ 	
 /******/ })()
 ;
