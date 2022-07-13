@@ -1,4 +1,4 @@
-@extends('admin.index')
+@extends('layouts.admin.index')
 
 @section('darkside-title')DarkSide - Управление сайтом@endsection
 

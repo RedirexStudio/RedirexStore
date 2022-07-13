@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoutingsTable extends Migration
+class CreatePageRelationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateRoutingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('routings', function (Blueprint $table) {
+        Schema::create('page_relations', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('post_id');
-            $table->string('url');
+            $table->integer('page_id');
+            $table->integer('parent_id');
         });
     }
 
@@ -27,6 +27,6 @@ class CreateRoutingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('routings');
+        Schema::dropIfExists('page_relations');
     }
 }

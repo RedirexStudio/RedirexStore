@@ -1,4 +1,26 @@
+/* Mixins */
+@mixin display-flex() {
+    display: flex;
+    display: -webkit-flex;
+}
+@mixin border-radius($pixel...) {
+    border-radius: $pixel;
+    -webkit-border-radius: $pixel;
+    -moz-border-radius: $pixel;
+    -ms-border-radius: $pixel;
+    -o-border-radius: $pixel;
+}
+
 /* Common */
+html{
+    @include display-flex();
+    flex-wrap: wrap;
+    height: 100%;
+
+    body{
+        flex: 1 1 100%;
+    }
+}
 .alert ul{
     margin-bottom: 0;
 }
@@ -10,18 +32,20 @@
     }
 }
 #page_edit-context{
+    .dropdown-item.open_page:hover{
+        background-color: rgb(178, 235, 242)
+    }
     .dropdown-item.edit:hover{
-        background-color: #ff6f00;
+        background-color: #ff6f00
     }
     .dropdown-item.remove:hover{
-        background-color: #f00;
+        background-color: #f00
     }
 }
 
 .logo{
     position: relative;
-    display: flex;
-    display: -webkit-flex;
+    @include display-flex();
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
@@ -46,8 +70,7 @@
     display: block;
 }
 .logo > span > span:last-child{
-    display: flex;
-    display: -webkit-flex;
+    @include display-flex();
     align-items: center;
 }
 .logo > span > span:last-child:before{
@@ -60,9 +83,8 @@
 
 /* General container */
 .general_container{
-    display: flex;
-    display: -webkit-flex;
-    height: 100vh;
+    @include display-flex();
+    height: 100%;
 }
 
 /* Sidebar */
@@ -95,11 +117,7 @@
             color: white;
             text-align: left;
             background-color: #ffffff0f;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            -ms-border-radius: 0;
-            -o-border-radius: 0;
-            border-radius: 0;
+            @include border-radius(0);
             margin-bottom: 5px;
         }
         li a:hover{
@@ -128,14 +146,14 @@
     .content{
         padding: 0 30px;
         margin-top: -100px;
+        margin-bottom: 100px;
 
         .inner{
-            display: flex;
-            display: -webkit-flex;
+            @include display-flex();
             flex-direction: column;
             min-height: 400px;
             background-color: white;
-            border-radius: 3px;
+            @include border-radius(3px);
             padding: 30px;
             box-shadow: 0px 0px 20px 0px #00000052;
         }
@@ -158,8 +176,7 @@
 
 /* Action bar styles */
 .action_bar{
-    display: flex;
-    display: -webkit-flex;
+    @include display-flex();
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
@@ -183,3 +200,63 @@
     width: 100%;
     margin: 0 auto
 }
+
+/* DarkSide -> Pages Archive */
+.pages_archive{
+    table{
+        tr{
+            cursor:pointer;
+            td:first-child{
+                display: none
+            }
+        }
+    }
+}
+
+/* DarkSide -> Edit */
+.title-form_wrap{
+    position: relative;
+
+    .url_popover{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        input{
+            @include border-radius(0);
+        }
+    }
+
+    input{
+        height: 42px;
+        line-height: 40px;
+    }
+}
+
+/* DarkSide -> Search Pages for Relative */
+.search_page_box{
+    flex: 1;
+
+    *{
+        width: 100%;
+    }
+    .nice-select{
+        @include border-radius(0);
+    }
+    .nice-select-search-box .spinner-grow{
+        position: absolute;
+        display: none;
+        width: 14px;
+        height: 14px;
+        right: 30px;
+        top: calc(50% - 6px);
+        vertical-align: 0;
+        text-indent: -9999px;
+        margin: 0;
+        line-height: 0;
+    }
+}
+
+/* Imports */
+@import "nice-select";
+@import "nice-select-search";

@@ -16,7 +16,7 @@ class IsAdmin{
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next){
-        if(Auth::user()->role == 1)
+        if(Auth::user()->role && Auth::user()->role == 1)
             return $next($request);
         else
             abort(404);

@@ -80,7 +80,7 @@
                             </div>
                         </form>
                     <div class="system-messages">
-                        @include('admin.inc.messages')
+                        @include('layouts.admin.inc.messages')
                     </div>
                 </div>
             </div>

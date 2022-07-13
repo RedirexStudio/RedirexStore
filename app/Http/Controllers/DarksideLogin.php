@@ -9,7 +9,7 @@ class DarksideLogin extends Controller{
 
     public function darkside_login(){
         if( !Auth::check() )
-            return view('admin/pages/login');
+            return view('layouts/admin/pages/login');
         else
             abort(404);
     }

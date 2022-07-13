@@ -16,7 +16,7 @@
 
     <div class="general_container">
         <!-- Sidebar -->
-        @include('admin.inc.aside')
+        @include('layouts.admin.inc.aside')
         <!-- End of Sidebar -->
         <!-- Content -->
         <div class="content_wrap">
@@ -33,7 +33,7 @@
                 <div class="inner">
                     @yield('darkside-content')
                     <div class="system-messages">
-                        @include('admin.inc.messages')
+                        @include('layouts.admin.inc.messages')
                     </div>
                 </div>
             </div>
@@ -48,6 +48,6 @@
         <!-- Tiny MCE -->
         <script src="{{asset('/admin/js/tinymce/tinymce.min.js')}}"></script>
         <!-- Admin JS -->
-        <script src="{{asset('/admin/js/darkside.js')}}"></script>
+        <script type="module" src="{{asset('/admin/js/darkside.js')}}"></script>
     </body>
 </html>

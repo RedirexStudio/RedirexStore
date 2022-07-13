@@ -23,6 +23,7 @@ class CreatePagesTable extends Migration
             $table->boolean('noindex')->default(true);
             $table->integer('viewed')->default(0);
             $table->string('author')->nullable();
+            $table->integer('template_id');
             $table->timestamps();
         });
     }

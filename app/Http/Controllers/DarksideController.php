@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class DarksideController extends Controller{
 
     public function darkside(){
-        return view('admin/home');
+        return view('layouts/admin/home');
     }
 
 }

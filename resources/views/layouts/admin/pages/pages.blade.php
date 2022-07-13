@@ -1,4 +1,4 @@
-@extends('admin.index')
+@extends('layouts.admin.index')
 
 @section('darkside-title')DarkSide - Архив страниц@endsection
 
@@ -15,37 +15,41 @@
     </div>
     <div id="content" class="pages_archive">
         @if($pages_data)
-            <table class="table table-hover">
+            <table class="table table-hover" id="sortTable">
                 <thead class="table-dark">
                     <tr>
-                    <th scope="col">№</th>
-                    <th scope="col">Заголовок</th>
-                    <th scope="col">Индексация</th>
-                    <th scope="col">Статус</th>
-                    <th scope="col">Автор</th>
-                    <th scope="col">Просмотров</th>
-                    <th scope="col">Создано</th>
-                    <th scope="col">Обновлено</th>
+                        <th scope="col">№</th>
+                        <th scope="col">Заголовок</th>
+                        <th scope="col">Индексация</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Автор</th>
+                        <th scope="col">Просмотров</th>
+                        <th scope="col">Создано</th>
+                        <th scope="col">Обновлено</th>
                     </tr>
                 </thead>
                 <tbody>
+                    
                     @foreach($pages_data as $page)
-                        <tr>
-                        <th scope="row">{{ $page->id }}</th>
-                        <td>{{ $page->title }}</td>
-                        <td>{{ $page->noindex }}</td>
-                        <td>{{ $page->status }}</td>
-                        <td>{{ $page->author }}</td>
-                        <td>{{ $page->viewed }}</td>
-                        <td>{{ $page->created_at }}</td>
-                        <td>{{ $page->updated_at }}</td>
+                        <tr update_url="{{ route('edit-page', $page->page->id) }}" delete_url="{{ route('delete-page-request', $page->page->id) }}" open_url="">
+                            <td><input type="checkbox" name="selected_pages[]" class="selected_pages" /></td>
+                            <th scope="row">{{ $page->page->id }}</th>
+                            <td>{{ $page->page->title }}</td>
+                            <td>{{ $page->page->noindex }}</td>
+                            <td>{{ $page->page->status }}</td>
+                            <td>{{ $page->page->author }}</td>
+                            <td>{{ $page->page->viewed }}</td>
+                            <td>{{ $page->page->created_at }}</td>
+                            <td>{{ $page->page->updated_at }}</td>
                         </tr>
+                        
                     @endforeach
                 </tbody>
             </table>
 
             <!-- Context Menu -->
             <div class="dropdown-menu dropdown-menu-sm" id="page_edit-context">
+                <a class="dropdown-item open_page" target="_blank" href="#">Смотреть</a>
                 <a class="dropdown-item edit" href="#">Редактировать</a>
                 <a class="dropdown-item remove" href="#">Удалить</a>
             </div>
