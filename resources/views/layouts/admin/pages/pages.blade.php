@@ -15,37 +15,56 @@
     </div>
     <div id="content" class="pages_archive">
         @if($pages_data)
-            <table class="table table-hover" id="sortTable">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">№</th>
-                        <th scope="col">Заголовок</th>
-                        <th scope="col">Индексация</th>
-                        <th scope="col">Статус</th>
-                        <th scope="col">Автор</th>
-                        <th scope="col">Просмотров</th>
-                        <th scope="col">Создано</th>
-                        <th scope="col">Обновлено</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
+            <div class="pages_list">
+                <div class="header">
+                    <ul>
+                        <li>№</li>
+                        <li>Заголовок</li>
+                        <li>Индексация</li>
+                        <li>Статус</li>
+                        <li>Автор</li>
+                        <li>Просмотров</li>
+                        <li>Создано</li>
+                        <li>Обновлено</li>
+                    </ul>
+                </div>
+
+                <div class="body">
                     @foreach($pages_data as $page)
-                        <tr update_url="{{ route('edit-page', $page->page->id) }}" delete_url="{{ route('delete-page-request', $page->page->id) }}" open_url="">
-                            <td><input type="checkbox" name="selected_pages[]" class="selected_pages" /></td>
-                            <th scope="row">{{ $page->page->id }}</th>
-                            <td>{{ $page->page->title }}</td>
-                            <td>{{ $page->page->noindex }}</td>
-                            <td>{{ $page->page->status }}</td>
-                            <td>{{ $page->page->author }}</td>
-                            <td>{{ $page->page->viewed }}</td>
-                            <td>{{ $page->page->created_at }}</td>
-                            <td>{{ $page->page->updated_at }}</td>
-                        </tr>
-                        
+                        <div class="item" update_url="{{ route('edit-page', $page->page->id) }}" delete_url="{{ route('delete-page-request', $page->page->id) }}" open_url="">
+                            <ul>
+                                <li><input type="checkbox" name="selected_pages[]" class="selected_pages" /></li>
+                                <li>{{ $page->page->id }}</th>
+                                <li>{{ $page->page->title }}</li>
+                                <li>{{ $page->page->noindex }}</li>
+                                <li>{{ $page->page->status }}</li>
+                                <li>{{ $page->page->author }}</li>
+                                <li>{{ $page->page->viewed }}</li>
+                                <li>{{ $page->page->created_at }}</li>
+                                <li>{{ $page->page->updated_at }}</li>
+                            </ul>
+
+                        </div>
+                                @foreach($page->childs as $childs)
+                                <div class="subitem">
+                                    <div class="item" update_url="{{ route('edit-page', $childs->id) }}" delete_url="{{ route('delete-page-request', $childs->id) }}" open_url="">
+                                        <ul>
+                                            <li><input type="checkbox" name="selected_pages[]" class="selected_pages" /></li>
+                                            <li>{{ $childs->id }}</th>
+                                            <li>- {{ $childs->title }}</li>
+                                            <li>{{ $childs->noindex }}</li>
+                                            <li>{{ $childs->status }}</li>
+                                            <li>{{ $childs->author }}</li>
+                                            <li>{{ $childs->viewed }}</li>
+                                            <li>{{ $childs->created_at }}</li>
+                                            <li>{{ $childs->updated_at }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                @endforeach
                     @endforeach
-                </tbody>
-            </table>
+                </div>
+            </div>
 
             <!-- Context Menu -->
             <div class="dropdown-menu dropdown-menu-sm" id="page_edit-context">

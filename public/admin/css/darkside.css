@@ -195,11 +195,105 @@ html body {
 }
 
 /* DarkSide -> Pages Archive */
-.pages_archive table tr {
-  cursor: pointer;
+.pages_archive .pages_list .header {
+  padding: 10px;
 }
-.pages_archive table tr td:first-child {
+.pages_archive .pages_list .header ul {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pages_archive .pages_list .header ul li {
+  color: #fff;
+}
+.pages_archive .pages_list .header ul li:nth-child(1) {
+  flex: 1 1 2%;
+}
+.pages_archive .pages_list .header ul li:nth-child(2) {
+  flex: 1 1 26%;
+}
+.pages_archive .pages_list .header ul li:nth-child(3) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .header ul li:nth-child(4) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .header ul li:nth-child(5) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .header ul li:nth-child(6) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .header ul li:nth-child(7) {
+  flex: 1 1 16%;
+}
+.pages_archive .pages_list .header ul li:nth-child(8) {
+  flex: 1 1 16%;
+}
+.pages_archive .pages_list .body > *:nth-child(even) {
+  background-color: #f3f2f2;
+}
+.pages_archive .pages_list .body .item {
+  padding: 10px;
+}
+.pages_archive .pages_list .body .item ul {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pages_archive .pages_list .body .item ul li:first-child {
   display: none;
+}
+.pages_archive .pages_list .body .item ul li {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(2) {
+  flex: 1 1 2%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(3) {
+  flex: 1 1 26%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(4) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(5) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(6) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(7) {
+  flex: 1 1 10%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(8) {
+  flex: 1 1 16%;
+}
+.pages_archive .pages_list .body .item ul li:nth-child(9) {
+  flex: 1 1 16%;
+}
+.pages_archive .pages_list .body .subitem {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+.pages_archive .pages_list .body .subitem > *:first-child {
+  flex: 1 1 20px;
+}
+.pages_archive .pages_list .body .subitem > *:last-child {
+  flex: 1 1 calc(100% - 20px);
+}
+.pages_archive .pages_list .body .subitem .item {
+  padding: 0;
 }
 
 /* DarkSide -> Edit */

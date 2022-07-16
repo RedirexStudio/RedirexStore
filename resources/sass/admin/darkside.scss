@@ -203,12 +203,116 @@ html{
 
 /* DarkSide -> Pages Archive */
 .pages_archive{
-    table{
-        tr{
-            cursor:pointer;
-            td:first-child{
-                display: none
+    .pages_list{
+        .header{
+            padding: 10px;
+            ul{
+                @include display-flex();
+                flex-wrap: wrap;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    color: #fff;
+                }
+                li:nth-child(1){
+                    flex: 1 1 2%;
+                }
+                li:nth-child(2){
+                    flex: 1 1 26%;
+                }
+                li:nth-child(3){
+                    flex: 1 1 10%;
+                }
+                li:nth-child(4){
+                    flex: 1 1 10%;
+                }
+                li:nth-child(5){
+                    flex: 1 1 10%;
+                }
+                li:nth-child(6){
+                    flex: 1 1 10%;
+                }
+                li:nth-child(7){
+                    flex: 1 1 16%;
+                }
+                li:nth-child(8){
+                    flex: 1 1 16%;
+                }
             }
+        }
+        .body{
+            >*:nth-child(even){
+                background-color: #f3f2f2
+            }
+            .item{
+                padding: 10px;
+
+                ul{
+                    @include display-flex();
+                    flex-wrap: wrap;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li:first-child{
+                        display: none
+                    }
+                    li{
+                        @include display-flex();
+                        align-items: center;
+                    }
+                    li:nth-child(2){
+                        flex: 1 1 2%;
+                    }
+                    li:nth-child(3){
+                        flex: 1 1 26%;
+                    }
+                    li:nth-child(4){
+                        flex: 1 1 10%;
+                    }
+                    li:nth-child(5){
+                        flex: 1 1 10%;
+                    }
+                    li:nth-child(6){
+                        flex: 1 1 10%;
+                    }
+                    li:nth-child(7){
+                        flex: 1 1 10%;
+                    }
+                    li:nth-child(8){
+                        flex: 1 1 16%;
+                    }
+                    li:nth-child(9){
+                        flex: 1 1 16%;
+                    }
+                }
+            }
+            .subitem{
+                @include display-flex();
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 10px;
+
+                >*:first-child{
+                    flex: 1 1 20px;
+                }
+                >*:last-child{
+                    flex: 1 1 calc(100% - 20px);
+                }
+
+                .item{
+                    padding: 0;
+                }
+            }
+            // .subitem:before{
+            //     content: '';
+            //     display: block;
+            //     width: 10px;
+            //     height: 0;
+            //     border-top: 1px dashed #000;
+
+            // }
         }
     }
 }
